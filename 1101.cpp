@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#define TAM 10
+#define TAM 50
 
 using namespace std;
 
@@ -8,40 +8,20 @@ using namespace std;
 
 int main()
 {
-    int m, n, aux, sum = 0;
+    int n,i;
+    char p[TAM], p2[TAM];
 
+    cin >> n;
 
-    do
-    {
-        cin >> m >> n;
-        sum = 0;
-        if(m <= 0 || n <= 0){
-            return 0;
-        }
+    for(i = 0; i < n; i++){
+        cin >> p[i];
+        cout << p[i];
+    }
 
-        if(m > n)
-        {
-            for(aux = n; aux <= m ; aux++)
-            {
-                sum = sum + aux;
-                cout << aux << " ";
-            }
-            cout << "Sum=" << sum << "\n";
-        }
-        else if(n > m)
-        {
-            {
-                for(aux = m; aux <= n ; aux++)
-                {
-                    sum = sum + aux;
-                    cout << aux << " ";
-                }
-                cout << "Sum=" << sum << "\n";
-            }
-        }
+    for(i = 0; i < n; i++){
+        cout << p[i];
+    }
 
-
-    } while (1);
     return 0;
 }
 
